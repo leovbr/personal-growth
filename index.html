@@ -1,53 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#080808">
-  <title>Personal Growth — 5 Year Journey</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#070707"><title>Personal Growth — 2026 → 2031</title><link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="app">
-    <header class="hero">
-      <div class="eyebrow">PERSONAL GROWTH · 2026—2031</div>
-      <h1>Build the life.<br><span>One day at a time.</span></h1>
-      <p>6 months to prove consistency. 5 years to document transformation.</p>
-      <div class="dates"><span>START · 26 SEP 2026</span><span>6M · 26 MAR 2027</span><span>5Y · 26 SEP 2031</span></div>
-    </header>
-
-    <section class="stats">
-      <article><small>JOURNAL DAYS</small><strong id="journalCount">0</strong></article>
-      <article><small>CHECK-INS</small><strong id="checkinCount">0</strong></article>
-      <article><small>CONSISTENCY</small><strong id="consistency">0%</strong></article>
-      <article><small>DAY</small><strong id="dayCount">1</strong></article>
-    </section>
-
-    <section class="panel">
-      <div class="section-head"><div><small>TODAY</small><h2>Daily Check-in</h2></div><span id="today"></span></div>
-      <div class="habits" id="habits"></div>
-      <div class="progress-wrap"><div class="progress-label"><span>Today's progress</span><b id="progressText">0%</b></div><div class="progress"><i id="progressBar"></i></div></div>
-    </section>
-
-    <section class="panel journal-panel">
-      <div class="section-head"><div><small>REFLECTION</small><h2>Journal</h2></div></div>
-      <div class="journal-grid">
-        <label>What did I do today?<textarea id="did" placeholder="Write honestly. No need to make it sound impressive."></textarea></label>
-        <label>What did I learn?<textarea id="learned" placeholder="A lesson, realization, or useful idea."></textarea></label>
-        <label>What went wrong?<textarea id="wrong" placeholder="No excuses. Just facts."></textarea></label>
-        <label>What will I improve tomorrow?<textarea id="tomorrow" placeholder="One concrete improvement."></textarea></label>
-      </div>
-      <div class="journal-actions"><button id="saveJournal">Save today's entry</button><span id="saveStatus"></span></div>
-    </section>
-
-    <section class="panel philosophy">
-      <small>THE RULE</small>
-      <blockquote>“Small progress, repeated consistently, becomes a different life.”</blockquote>
-      <p>Do not chase perfect days. Record real days, learn from them, and keep moving.</p>
-    </section>
-
-    <footer>PERSONAL GROWTH · PRIVATE LIFE, PUBLIC PROGRESS</footer>
-  </main>
-  <script src="app.js"></script>
-</body>
-</html>
+<body><main class="app">
+<header class="hero"><div class="eyebrow">PERSONAL GROWTH · 2026—2031</div><h1>Build the life.<br><span>One day at a time.</span></h1><p>Six months to build consistency. Five years to document the transformation.</p><div class="dates"><span>START · 26 SEP 2026</span><span>6 MONTHS · 26 MAR 2027</span><span>5 YEARS · 26 SEP 2031</span></div></header>
+<section class="stats"><article><small>JOURNAL DAYS</small><strong id="journalCount">0</strong></article><article><small>CHECK-INS</small><strong id="checkinCount">0</strong></article><article><small>CONSISTENCY</small><strong id="consistency">0%</strong></article><article><small>DAY</small><strong id="dayCount">1</strong></article></section>
+<section class="panel timeline"><div class="section-head"><div><small>THE JOURNEY</small><h2>6 Months → 5 Years</h2></div><span id="journeyLabel">Day 1</span></div><div class="milestones"><div class="milestone active"><b>NOW</b><strong>26 SEP 2026</strong><span>Start</span></div><div class="line"><i id="sixMonthBar"></i></div><div class="milestone"><b>6M</b><strong>26 MAR 2027</strong><span>First checkpoint</span></div><div class="line"><i id="fiveYearBar"></i></div><div class="milestone"><b>5Y</b><strong>26 SEP 2031</strong><span>Long-term horizon</span></div></div></section>
+<section class="panel"><div class="section-head"><div><small>TODAY</small><h2>Daily Check-in</h2></div><span id="today"></span></div><div class="habits" id="habits"></div><div class="progress-wrap"><div class="progress-label"><span>Today's progress</span><b id="progressText">0%</b></div><div class="progress"><i id="progressBar"></i></div></div></section>
+<section class="panel journal-panel"><div class="section-head"><div><small>REFLECTION</small><h2>Daily Journal</h2></div><span>Saved on this device</span></div><div class="journal-grid"><label>What did I do today?<textarea id="did" placeholder="Write honestly. No need to make it sound impressive."></textarea></label><label>What did I learn?<textarea id="learned" placeholder="A lesson, realization, or useful idea."></textarea></label><label>What went wrong?<textarea id="wrong" placeholder="No excuses. Just facts."></textarea></label><label>What will I improve tomorrow?<textarea id="tomorrow" placeholder="One concrete improvement."></textarea></label></div><div class="journal-actions"><button id="saveJournal">Save today's entry</button><button class="ghost" id="clearJournal">Clear</button><span id="saveStatus"></span></div></section>
+<section class="panel history-panel"><div class="section-head"><div><small>RECENT</small><h2>Growth Log</h2></div><span id="logCount">0 entries</span></div><div id="history" class="history"></div></section>
+<section class="panel philosophy"><small>THE RULE</small><blockquote>“Small progress, repeated consistently, becomes a different life.”</blockquote><p>Do not chase perfect days. Record real days, learn from them, and keep moving.</p></section>
+<footer>PERSONAL GROWTH · PRIVATE LIFE, PUBLIC PROGRESS · 2026—2031</footer>
+</main><script src="app.js"></script></body></html>
