@@ -1,4 +1,4 @@
-const CACHE='personal-growth-v6';
+const CACHE='personal-growth-v7';
 const CORE=['./','./index.html','./style.css','./app.js','./manifest.json','./icon.svg'];
 
 self.addEventListener('install',event=>{
