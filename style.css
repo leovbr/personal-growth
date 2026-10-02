@@ -130,3 +130,14 @@ body.skill-page-open{overflow:hidden}
 .status-skills .section-head>span{font-size:10px;color:#94a3b8}
 .status-skills .skill-item{background:rgba(8,14,26,.45)}
 .status-skills .skill-item small{font-size:8px;color:#64748b;white-space:nowrap}
+
+/* COMPACT JOURNAL FIELDS */
+.journal-panel{padding:20px}
+.journal-panel .section-head{margin-bottom:14px}
+.journal-grid{gap:10px}
+.journal-grid textarea{min-height:88px;padding:10px 12px;font-size:13px;line-height:1.5}
+@media(max-width:700px){.journal-grid textarea{min-height:78px}.journal-panel{padding:18px}}
+/* COMPACT SKILL PANEL */
+.skills-today{padding:18px;margin-top:12px}
+.skills-today .quest-note{margin-bottom:12px}
+.skills-today .skill-form{margin-top:10px}
