@@ -15,18 +15,23 @@ const PROFILE_KEY='personalGrowthProfile';
 const profile=JSON.parse(localStorage.getItem(PROFILE_KEY)||'{"name":"LEO","photo":""}');
 function renderProfile(){const name=(profile.name||'LEO').toUpperCase();$('profileName').textContent=name;$('profileNameInput').value=profile.name||'LEO';$('profileRank').textContent=$('rank').textContent;const nodes=[$('profileAvatar'),$('profileAvatarLarge'),$('statusAvatar')].filter(Boolean);nodes.forEach(n=>{n.innerHTML=profile.photo?'<img src="'+profile.photo+'" alt="Foto profil">':'👤'})}
 $('profileButton').onclick=e=>{e.stopPropagation();$('profileMenu').hidden=!$('profileMenu').hidden};document.addEventListener('click',e=>{if(!$('profileMenu').contains(e.target)&&e.target!==$('profileButton'))$('profileMenu').hidden=true});$('profilePhotoInput').onchange=e=>{const file=e.target.files?.[0];if(!file)return;const reader=new FileReader();reader.onload=()=>{profile.photo=reader.result;localStorage.setItem(PROFILE_KEY,JSON.stringify(profile));renderProfile()};reader.readAsDataURL(file)};$('saveProfile').onclick=()=>{profile.name=$('profileNameInput').value.trim()||'LEO';localStorage.setItem(PROFILE_KEY,JSON.stringify(profile));renderProfile();
-const playerAvatarButton=$('playerAvatarButton');
-if(playerAvatarButton) playerAvatarButton.onclick=()=>$('profilePhotoInput')?.click();
-function syncStatusAvatar(){
-  const src=profile.photo;
-  const target=$('statusAvatar');
-  if(target) target.innerHTML=src?'<img src="'+src+'" alt="Foto profil">':'👤';
-}
 $('profileMenu').hidden=true};$('removeProfilePhoto').onclick=()=>{profile.photo='';localStorage.setItem(PROFILE_KEY,JSON.stringify(profile));renderProfile()};renderProfile();
 
+const playerAvatarButton=$('playerAvatarButton');
+if(playerAvatarButton) playerAvatarButton.onclick=()=>$('profilePhotoInput')?.click();
 const statusButton=$('statusButton'),statusDrawer=$('statusDrawer'),statusBackdrop=$('statusBackdrop'),closeStatus=$('closeStatus');
-function openStatus(){statusDrawer.hidden=false;statusBackdrop.hidden=false;document.body.classList.add('status-open')}
-function closeStatusDrawer(){statusDrawer.hidden=true;statusBackdrop.hidden=true;document.body.classList.remove('status-open')}
+function openStatus(){
+  if(!statusDrawer||!statusBackdrop)return;
+  statusDrawer.hidden=false;
+  statusBackdrop.hidden=false;
+  document.body.classList.add('status-open');
+}
+function closeStatusDrawer(){
+  if(!statusDrawer||!statusBackdrop)return;
+  statusDrawer.hidden=true;
+  statusBackdrop.hidden=true;
+  document.body.classList.remove('status-open');
+}
 statusButton?.addEventListener('click',openStatus);
 closeStatus?.addEventListener('click',closeStatusDrawer);
 statusBackdrop?.addEventListener('click',closeStatusDrawer);
