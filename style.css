@@ -97,3 +97,28 @@ body.journal-page-open{overflow:hidden}
 .status-button{position:fixed!important;top:16px!important;left:16px!important;z-index:1000!important;transform:none!important;touch-action:manipulation}
 .status-button:hover{transform:none!important}
 @media(max-width:700px){.status-button{position:fixed!important;top:12px!important;left:12px!important;z-index:1000!important}}
+
+/* MANUAL SKILL SYSTEM */
+.skills-today .section-head{margin-bottom:10px}
+.skill-form{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:14px}
+.skill-form input{width:100%;padding:13px 14px;border:1px solid #475569;border-radius:10px;background:#0b1220;color:#f8fafc;outline:none}
+.skill-form input:focus{border-color:#818cf8;box-shadow:0 0 0 3px rgba(129,140,248,.08)}
+.skill-list{display:grid;gap:8px;margin-top:12px}
+.skill-item{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:12px 13px;border:1px solid rgba(129,140,248,.16);border-radius:10px;background:linear-gradient(145deg,#172235,#101827);color:#dbe4f0}
+.skill-item>span{font-size:12px;line-height:1.5;min-width:0;overflow-wrap:anywhere}
+.skill-item>div{display:flex;gap:5px;flex-shrink:0}
+.skill-item button{padding:7px 9px;font-size:9px;border-radius:7px}
+.skill-actions{margin-top:12px}
+.skill-archive{min-height:70vh}
+.skill-history{display:grid;gap:12px}
+.skill-day{padding:15px;border:1px solid rgba(129,140,248,.16);border-radius:14px;background:linear-gradient(145deg,#172235,#101827)}
+.skill-day-head{display:flex;justify-content:space-between;gap:10px;align-items:center;margin-bottom:8px}
+.skill-day-head b{font-size:10px;letter-spacing:.15em;color:#a5b4fc}
+.skill-day-head span{font-size:9px;color:#64748b}
+.archive-skill{margin-top:7px}
+body.skill-page-open{overflow:hidden}
+.status-is-open{display:none!important}
+@media(max-width:700px){.skill-form{grid-template-columns:1fr}.skill-form button{width:100%}.skill-item{align-items:flex-start}.skill-item>div{flex-wrap:wrap;justify-content:flex-end}.skill-archive{min-height:80vh}}
+/* The status trigger lives directly under body so fixed positioning is tied to the viewport. */
+.status-button{position:fixed!important;top:12px!important;left:12px!important;z-index:10000!important;transform:none!important}
+.status-button:hover{transform:none!important}
