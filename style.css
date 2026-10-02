@@ -144,3 +144,36 @@ body.skill-page-open{overflow:hidden}
 
 /* SMOKING TARGET LIST */
 .smoke-head-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap;justify-content:flex-end}.smoke-head-actions #smokeDate{font-size:9px;color:#64748b;letter-spacing:.08em}.smoke-list{display:grid;gap:14px}.smoke-target{padding:16px;background:rgba(15,23,42,.55);border:1px solid #7c2d12;border-radius:10px}.smoke-target-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px}.smoke-target-head h3{margin:4px 0 0;font-size:17px}.smoke-target-actions{display:flex;gap:7px;flex-wrap:wrap;justify-content:flex-end}.smoke-target-actions button{padding:8px 10px;font-size:9px}.smoke-target .smoke-card{border-radius:8px}.smoke-target .smoke-settings{margin-top:14px}.smoke-target-footer{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.smoke-target-footer button{padding:8px 10px;font-size:9px}.smoke-empty{padding:24px}.smoke-target .progress{height:7px}.smoke-target .progress i{display:block;height:100%;background:#fb923c;border-radius:inherit}.smoke-target[hidden]{display:none!important}@media(max-width:700px){.smoke-target-head{align-items:flex-start;flex-direction:column}.smoke-target-actions{width:100%;justify-content:flex-start}.smoke-head-actions{align-items:flex-start;flex-direction:column}.smoke-head-actions button{width:100%}}
+
+
+/* PREMIUM AMBIENT BACKGROUND + ANIMATED SHADOWS */
+html,body{min-height:100%;background:#070b14}
+body{position:relative;overflow-x:hidden;background:radial-gradient(circle at 8% 8%,rgba(99,102,241,.20),transparent 26%),radial-gradient(circle at 92% 18%,rgba(168,85,247,.16),transparent 24%),radial-gradient(circle at 50% 100%,rgba(14,165,233,.10),transparent 30%),linear-gradient(135deg,#050810 0%,#0a1020 48%,#070b15 100%);background-attachment:fixed}
+body:before{content:"";position:fixed;inset:-20%;pointer-events:none;z-index:-3;background:radial-gradient(circle at 18% 28%,rgba(56,189,248,.12),transparent 20%),radial-gradient(circle at 78% 38%,rgba(129,140,248,.15),transparent 22%),radial-gradient(circle at 48% 78%,rgba(192,132,252,.09),transparent 19%);filter:blur(28px);animation:ambientDrift 14s ease-in-out infinite alternate}
+body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:linear-gradient(115deg,transparent 0%,rgba(129,140,248,.035) 42%,transparent 58%),radial-gradient(ellipse at center,transparent 42%,rgba(0,0,0,.34) 100%);animation:ambientSweep 9s ease-in-out infinite alternate}
+.app{position:relative}
+.app:before{content:"";position:fixed;left:50%;top:42%;width:520px;height:520px;transform:translate(-50%,-50%);pointer-events:none;z-index:-1;background:radial-gradient(circle,rgba(99,102,241,.075),transparent 68%);filter:blur(18px);animation:coreGlow 7s ease-in-out infinite}
+.panel,.stats article{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(24,34,54,.90),rgba(8,14,27,.94));border:1px solid rgba(148,163,184,.16);box-shadow:0 18px 55px rgba(0,0,0,.34),0 0 0 rgba(99,102,241,0),inset 0 1px rgba(255,255,255,.045);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+.panel:before,.stats article:before{content:"";position:absolute;inset:-2px;pointer-events:none;background:linear-gradient(115deg,transparent 20%,rgba(255,255,255,.045) 46%,transparent 58%);transform:translateX(-120%);animation:panelSheen 8s ease-in-out infinite}
+.panel:after,.stats article:after{content:"";position:absolute;inset:auto 12% -70px 12%;height:90px;pointer-events:none;background:radial-gradient(ellipse,rgba(99,102,241,.16),transparent 68%);filter:blur(18px);opacity:.7;animation:shadowPulse 4.5s ease-in-out infinite}
+.panel>*{position:relative;z-index:1}
+.panel:hover{transform:translateY(-2px);border-color:rgba(129,140,248,.34);box-shadow:0 28px 85px rgba(0,0,0,.46),0 0 32px rgba(99,102,241,.08),inset 0 1px rgba(255,255,255,.06)}
+.missions{background:linear-gradient(145deg,rgba(28,40,66,.94),rgba(10,17,30,.96));box-shadow:0 22px 70px rgba(30,41,88,.34),0 0 42px rgba(99,102,241,.07),inset 0 1px rgba(255,255,255,.055)}
+.habits{gap:10px}
+.habit{border-radius:12px;background:linear-gradient(145deg,rgba(23,34,53,.94),rgba(11,18,31,.96));border:1px solid rgba(148,163,184,.15);box-shadow:0 9px 28px rgba(0,0,0,.22),inset 0 1px rgba(255,255,255,.025);transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,background .25s ease}
+.habit:hover{border-color:rgba(129,140,248,.48);box-shadow:0 14px 36px rgba(0,0,0,.32),0 0 24px rgba(99,102,241,.08)}
+.habit.done{background:linear-gradient(145deg,rgba(70,92,139,.96),rgba(39,53,84,.98));color:#eef4ff;border-color:rgba(147,197,253,.72);box-shadow:0 10px 32px rgba(59,130,246,.16),inset 0 1px rgba(255,255,255,.12)}
+.habit.done .check{border-color:#bfdbfe;background:rgba(219,234,254,.10);box-shadow:0 0 16px rgba(96,165,250,.16)}
+.progress{background:rgba(15,23,42,.8);box-shadow:inset 0 2px 7px rgba(0,0,0,.45),0 0 12px rgba(99,102,241,.05)}
+.progress i{box-shadow:0 0 16px rgba(129,140,248,.42)}
+.smoke{background:linear-gradient(145deg,rgba(42,29,27,.94),rgba(13,18,28,.97));box-shadow:0 22px 70px rgba(124,45,18,.18),0 0 35px rgba(251,146,60,.035),inset 0 1px rgba(255,255,255,.045)}
+.smoke-target{background:linear-gradient(145deg,rgba(39,29,28,.86),rgba(14,19,29,.94));border-color:rgba(251,146,60,.34);box-shadow:0 14px 38px rgba(0,0,0,.28),inset 0 1px rgba(255,255,255,.035)}
+.smoke-card{background:linear-gradient(145deg,rgba(53,32,27,.88),rgba(27,22,24,.94));box-shadow:inset 0 1px rgba(255,255,255,.035),0 10px 30px rgba(0,0,0,.22)}
+.status-button{box-shadow:0 12px 38px rgba(0,0,0,.52),0 0 26px rgba(99,102,241,.10),inset 0 1px rgba(255,255,255,.08);animation:statusFloat 4s ease-in-out infinite}
+@keyframes ambientDrift{0%{transform:translate3d(-2%,0,0) scale(1)}50%{transform:translate3d(2%,-2%,0) scale(1.04)}100%{transform:translate3d(-1%,2%,0) scale(1.02)}}
+@keyframes ambientSweep{0%{opacity:.55;transform:translateX(-2%)}100%{opacity:1;transform:translateX(2%)}}
+@keyframes coreGlow{0%,100%{opacity:.45;transform:translate(-50%,-50%) scale(.92)}50%{opacity:.85;transform:translate(-50%,-50%) scale(1.08)}}
+@keyframes panelSheen{0%,65%{transform:translateX(-120%)}100%{transform:translateX(120%)}}
+@keyframes shadowPulse{0%,100%{opacity:.38;transform:scale(.86)}50%{opacity:.78;transform:scale(1.08)}}
+@keyframes statusFloat{0%,100%{box-shadow:0 12px 38px rgba(0,0,0,.52),0 0 20px rgba(99,102,241,.08),inset 0 1px rgba(255,255,255,.08)}50%{box-shadow:0 16px 42px rgba(0,0,0,.58),0 0 30px rgba(99,102,241,.18),inset 0 1px rgba(255,255,255,.10)}}
+@media(prefers-reduced-motion:reduce){body:before,body:after,.app:before,.panel:before,.stats article:before,.panel:after,.stats article:after,.status-button{animation:none!important}.panel,.habit{transition:none!important}}
