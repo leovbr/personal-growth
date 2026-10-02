@@ -122,3 +122,11 @@ body.skill-page-open{overflow:hidden}
 /* The status trigger lives directly under body so fixed positioning is tied to the viewport. */
 .status-button{position:fixed!important;top:12px!important;left:12px!important;z-index:10000!important;transform:none!important}
 .status-button:hover{transform:none!important}
+
+/* STATUS SKILL LIST */
+.status-skills{margin:12px 0 4px;padding:16px;border:1px solid rgba(129,140,248,.16);border-radius:14px;background:linear-gradient(145deg,#172235,#101827)}
+.status-skills .section-head{margin-bottom:8px;align-items:center}
+.status-skills h3{margin:5px 0 0;font-size:17px}
+.status-skills .section-head>span{font-size:10px;color:#94a3b8}
+.status-skills .skill-item{background:rgba(8,14,26,.45)}
+.status-skills .skill-item small{font-size:8px;color:#64748b;white-space:nowrap}
